@@ -1,0 +1,51 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug [Expo] (React Native Tools)",
+			"cwd": "${workspaceFolder}",
+			"type": "reactnative",
+			"request": "launch",
+			"platform": "exponent",
+			"sourceMaps": true,
+			"expoHostType": "lan",
+			"openExpoQR": false
+		},
+		{
+			"name": "Debug with DevTools [Expo] (React Native Tools)",
+			"cwd": "${workspaceFolder}",
+			"type": "reactnative",
+			"request": "launch",
+			"platform": "exponent",
+			"sourceMaps": true,
+			"expoHostType": "lan",
+			"openExpoQR": false,
+			"preLaunchTask": "Launch DevTools"
+		},
+		{
+			"name": "Debug Android [Expo] (React Native Tools)",
+			"cwd": "${workspaceFolder}",
+			"type": "reactnative",
+			"request": "launch",
+			"platform": "exponent",
+			"sourceMaps": true,
+			"expoHostType": "lan",
+			"openExpoQR": false,
+			"preLaunchTask": "Launch Android"
+		},
+		{
+			"name": "Debug Android with DevTools [Expo] (React Native Tools)",
+			"cwd": "${workspaceFolder}",
+			"type": "reactnative",
+			"request": "launch",
+			"platform": "exponent",
+			"sourceMaps": true,
+			"expoHostType": "lan",
+			"openExpoQR": false,
+			"preLaunchTask": "Launch Android & DevTools"
+		}
+	]
+}
