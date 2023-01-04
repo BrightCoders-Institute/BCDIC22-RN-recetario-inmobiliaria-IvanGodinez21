@@ -1,12 +1,12 @@
-name: Workflow for Codecov
-on: [push, pull_request]
+name: CI
+on: [workflow_dispatch, push, pull_request]
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Set up Node 18
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -16,3 +16,9 @@ jobs:
         run: npm run test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
+      - name: Upload coverage to Code climate
+        uses: paambaati/codeclimate-action@v3.2.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          debug: true

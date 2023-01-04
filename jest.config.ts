@@ -20,13 +20,13 @@ export default {
 	collectCoverage: true,
 
 	// An array of glob patterns indicating a set of files for which coverage information should be collected
-	collectCoverageFrom: ['src/**/*.ts', 'src/**/*.mts', '!src/**/*.d.ts', '!src/**/*.d.mts'],
+	// collectCoverageFrom: ['src/**/*.ts', 'src/**/*.mts', '!src/**/*.d.ts', '!src/**/*.d.mts'],
 
 	// The directory where Jest should output its coverage files
-	coverageDirectory: 'coverage',
+	//	coverageDirectory: 'coverage',
 
 	// An array of regexp pattern strings used to skip coverage collection
-	coveragePathIgnorePatterns: ['\\\\node_modules\\\\', './src/interfaces'],
+	// coveragePathIgnorePatterns: ['\\\\node_modules\\\\', './src/interfaces'],
 
 	// Indicates which provider should be used to instrument code for coverage
 	coverageProvider: 'v8',
@@ -74,21 +74,12 @@ export default {
 	// ],
 
 	// An array of file extensions your modules use
-	// moduleFileExtensions: [
-	//   "js",
-	//   "mjs",
-	//   "cjs",
-	//   "jsx",
-	//   "ts",
-	//   "tsx",
-	//   "json",
-	//   "node"
-	// ],
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
 
 	// A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-	moduleNameMapper: {
-		'^(\\.{1,2}/.*)\\.(m)?js$': '$1',
-	},
+	// moduleNameMapper: {
+	// 	'^(\\.{1,2}/.*)\\.(m)?js$': '$1',
+	// },
 
 	// An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
 	// modulePathIgnorePatterns: [],
@@ -100,7 +91,7 @@ export default {
 	// notifyMode: "failure-change",
 
 	// A preset that is used as a base for Jest's configuration
-	preset: 'ts-jest/presets/default-esm',
+	preset: 'jest-expo',
 
 	// Run tests from one or more projects
 	// projects: undefined,
@@ -132,7 +123,7 @@ export default {
 	// runner: "jest-runner",
 
 	// The paths to modules that run some code to configure or set up the testing environment before each test
-	// setupFiles: [],
+	//setupFiles: ['./jest.setup.ts'],
 
 	// A list of paths to modules that run some code to configure or set up the testing framework before each test
 	// setupFilesAfterEnv: [],
@@ -144,7 +135,7 @@ export default {
 	// snapshotSerializers: [],
 
 	// The test environment that will be used for testing
-	testEnvironment: 'node',
+	testEnvironment: 'jsdom',
 
 	// Options that will be passed to the testEnvironment
 	// testEnvironmentOptions: {},
@@ -164,7 +155,7 @@ export default {
 	// ],
 
 	// The regexp pattern or array of patterns that Jest uses to detect test files
-	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(m)?ts$',
+	// testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(m)?tsx$',
 
 	// This option allows the use of a custom results processor
 	// testResultsProcessor: undefined,
@@ -173,15 +164,14 @@ export default {
 	// testRunner: "jest-circus/runner",
 
 	// A map from regular expressions to paths to transformers
-	transform: {
-		'^.+\\.m?[tj]s?$': ['ts-jest', { useESM: true }],
-	},
+	// transform: {
+	// 	'^.+\\.m?[tj]s?$': ['ts-jest', { useESM: true }],
+	// },
 
 	// An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-	// transformIgnorePatterns: [
-	//   "\\\\node_modules\\\\",
-	//   "\\.pnp\\.[^\\\\]+$"
-	// ],
+	transformIgnorePatterns: [
+		'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)',
+	],
 
 	// An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
 	// unmockedModulePathPatterns: undefined,

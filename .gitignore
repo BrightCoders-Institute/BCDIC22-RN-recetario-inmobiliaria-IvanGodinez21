@@ -6,6 +6,7 @@
 *.key
 *.mobileprovision
 *.orig.*
+coverage/
 dist/
 node_modules/
 npm-debug.*
