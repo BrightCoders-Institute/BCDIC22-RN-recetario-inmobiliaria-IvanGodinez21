@@ -1,0 +1,92 @@
+[
+	{
+		"address": "3517 W. Gray St. Utica",
+		"bathrooms": 2,
+		"cost": 440,
+		"favorite": null,
+		"name": "The Willows",
+		"qualification": 4.7,
+		"rooms": 3,
+		"surface": {
+			"lenght": 10,
+			"width": 23,
+			"heigth": null,
+			"unit": "ft"
+		}
+	},
+	{
+		"address": "3517 W. Gray St. Utica",
+		"bathrooms": 2,
+		"cost": 440,
+		"favorite": null,
+		"name": "Orchard House",
+		"qualification": 4.7,
+		"rooms": 3,
+		"surface": {
+			"lenght": 10,
+			"width": 23,
+			"heigth": null,
+			"unit": "ft"
+		}
+	},
+	{
+		"address": "3517 W. Gray St. Utica",
+		"bathrooms": 2,
+		"cost": 440,
+		"favorite": null,
+		"name": "Orchard House",
+		"qualification": 4.7,
+		"rooms": 3,
+		"surface": {
+			"lenght": 10,
+			"width": 23,
+			"heigth": null,
+			"unit": "ft"
+		}
+	},
+	{
+		"address": "3517 W. Gray St. Utica",
+		"bathrooms": 2,
+		"cost": 440,
+		"favorite": null,
+		"name": "The Willows",
+		"qualification": 4.7,
+		"rooms": 3,
+		"surface": {
+			"lenght": 10,
+			"width": 23,
+			"heigth": null,
+			"unit": "ft"
+		}
+	},
+	{
+		"address": "3517 W. Gray St. Utica",
+		"bathrooms": 2,
+		"cost": 440,
+		"favorite": null,
+		"name": "Corner House",
+		"qualification": 4.7,
+		"rooms": 3,
+		"surface": {
+			"lenght": 10,
+			"width": 23,
+			"heigth": null,
+			"unit": "ft"
+		}
+	},
+	{
+		"address": "3517 W. Gray St. Utica",
+		"bathrooms": 2,
+		"cost": 440,
+		"favorite": null,
+		"name": "Orchard House",
+		"qualification": 4.7,
+		"rooms": 3,
+		"surface": {
+			"lenght": 10,
+			"width": 23,
+			"heigth": null,
+			"unit": "ft"
+		}
+	}
+]
