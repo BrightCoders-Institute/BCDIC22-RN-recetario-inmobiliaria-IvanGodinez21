@@ -1,36 +1,43 @@
 {
-  "expo": {
-    "name": "inmobiliaria",
-    "slug": "inmobiliaria",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
-    "userInterfaceStyle": "light",
-    "backgroundColor": "#282828",
-    "splash": {
-      "image": "./src/assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#282828"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./src/assets/adaptive-icon.png",
-        "backgroundColor": "#282828"
-      }
-    },
-    "web": {
-      "favicon": "./src/assets/favicon.png"
-    },
-    "sdkVersion": "47.0.0"
-  },
-  "name": "inmobiliaria"
+	"expo": {
+		"name": "inmobiliaria",
+		"slug": "bcdic22-rn-recetario-inmobiliaria-ivangodinez21",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./src/assets/icon.png",
+		"userInterfaceStyle": "light",
+		"backgroundColor": "#FFFFFF",
+		"splash": {
+			"image": "./src/assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#FFFFFF"
+		},
+		"updates": {
+			"fallbackToCacheTimeout": 0,
+			"url": "https://u.expo.dev/fe090d60-a461-43c1-a7b1-6f91b579b490"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.brightcoders.bcdic22rnrecetarioinmobiliariaivangodinez21"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./src/assets/adaptive-icon.png",
+				"backgroundColor": "#FFFFFF"
+			},
+			"package": "com.brightcoders.bcdic22rnrecetarioinmobiliariaivangodinez21"
+		},
+		"web": {
+			"favicon": "./src/assets/favicon.png"
+		},
+		"sdkVersion": "47.0.0",
+		"extra": {
+			"eas": {
+				"projectId": "fe090d60-a461-43c1-a7b1-6f91b579b490"
+			}
+		},
+		"owner": "brightcoders"
+	},
+	"name": "inmobiliaria"
 }

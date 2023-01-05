@@ -7,12 +7,12 @@ export const NavigationContainerTheme = {
 		//primary: '#151525',
 		//secondary: '#151525',
 		text: '#151525',
-		background: '#F5FDFF',
-		//border: '#ffffff',
-		//notification: '#ffffff',
+		background: '#FFFFFF',
+		//border: '#FFFFFF',
+		//notification: '#FFFFFF',
 	},
 };
 
-export const DefaultStackScreenTheme = { headerShown: false, headerStyle: { backgroundColor: '#282828' } };
+export const DefaultStackScreenTheme = { headerShown: false, headerStyle: { backgroundColor: '#FFFFFF' } };
 
 export const HomeStackScreenTheme = { ...DefaultStackScreenTheme, headerShown: false };
