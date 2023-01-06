@@ -8,5 +8,5 @@ import { RootStackParamList } from './RootStackParamList';
 export type IHomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export interface IHomeState {
-	data: { properties: Property[] };
+	data?: { properties: Property[] };
 }

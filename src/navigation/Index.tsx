@@ -12,6 +12,7 @@ import properties from '../databases/properties.json';
 import { RootStackParamList } from '../interfaces/RootStackParamList';
 // Screens
 import Home from '../screens/Home';
+import PropertyDetails from '../screens/PropertyDetails';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -30,6 +31,7 @@ export default class Navigation extends Component {
 						options={HomeStackScreenTheme}
 						initialParams={{ data: { properties: properties as Property[] } }}
 					/>
+					<Stack.Screen name='PropertyDetails' component={PropertyDetails} options={HomeStackScreenTheme} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);

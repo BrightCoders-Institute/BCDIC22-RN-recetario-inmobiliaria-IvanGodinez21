@@ -16,7 +16,7 @@ export default class Card extends Component<ICardProps> {
 				style={[
 					this.props.style,
 					{
-						backgroundColor: '#e0f9ff',
+						backgroundColor: '#E7F4F7',
 						borderRadius: 10,
 						padding: 16,
 						justifyContent: 'flex-start',
@@ -105,14 +105,19 @@ export default class Card extends Component<ICardProps> {
 						>{`$${this.props.item.cost}/m`}</Text>
 						<MaterialIcons
 							name='favorite'
+							testID='favoriteButton'
 							size={14}
-							color={this.props.item.favorite ? '#FF6DA2' : '#FFFFFF'}
+							color='#FFFFFF'
 							style={{
 								padding: 6,
 								textAlign: 'center',
 								textAlignVertical: 'center',
-								backgroundColor: '#00B074',
+								backgroundColor: `${this.props.item.favorite ? '#FF6DA2' : '#00B074'}`,
 								borderRadius: 100,
+							}}
+							onPress={() => {
+								this.props.item.favorite = !this.props.item.favorite;
+								this.setState({ favorite: this.props.item.favorite });
 							}}
 						/>
 					</View>

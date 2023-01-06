@@ -1,6 +1,6 @@
 // Node modules
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 // Classes
 import Property from '../classes/Property';
@@ -13,7 +13,7 @@ export default class Home extends Component<IHomeProps, IHomeState> {
 	constructor(props: IHomeProps) {
 		super(props);
 		this.state = {
-			data: this.props.route.params.data,
+			data: this.props.route.params?.data,
 		};
 	}
 
@@ -23,10 +23,17 @@ export default class Home extends Component<IHomeProps, IHomeState> {
 				style={{ marginTop: Constants.statusBarHeight }}
 				contentContainerStyle={{ alignItems: 'center', alignSelf: 'center' }}
 			>
-				{this.state.data.properties
+				{this.state.data?.properties
 					//?.sort((a: Property, b: Property) => (a.name > b.name ? 1 : -1))
 					.map((item: Property, index) => (
-						<Card key={index} style={styles.card} item={item} elementsSize={'sm'} />
+						<TouchableOpacity
+							key={index}
+							onPress={() => {
+								this.props.navigation.navigate('PropertyDetails', { data: { property: item } });
+							}}
+						>
+							<Card style={styles.card} item={item} />
+						</TouchableOpacity>
 					))}
 			</ScrollView>
 		);

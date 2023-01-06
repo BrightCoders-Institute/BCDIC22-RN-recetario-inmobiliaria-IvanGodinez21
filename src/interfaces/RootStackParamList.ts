@@ -4,5 +4,6 @@ import { ParamListBase } from '@react-navigation/native';
 import Property from '../classes/Property';
 
 export interface RootStackParamList extends ParamListBase {
-	Home: { data: { properties: Property[] } };
+	Home?: { data: { properties: Property[] } };
+	PropertyDetails: { data: { property: Property } };
 }
