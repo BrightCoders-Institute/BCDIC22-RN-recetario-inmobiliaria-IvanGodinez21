@@ -1,7 +1,7 @@
 // Node modules
 import React, { Component } from 'react';
 import { Text, ImageBackground, View } from 'react-native';
-import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 // Interfaces
 import { ICardProps } from '../interfaces/Card';
 
@@ -40,7 +40,7 @@ export default class Card extends Component<ICardProps> {
 							borderRadius: 10,
 						}}
 					>
-						<MaterialIcons
+						<MaterialCommunityIcons
 							name='star'
 							size={14}
 							color='#EEBA00'
@@ -54,8 +54,8 @@ export default class Card extends Component<ICardProps> {
 				<View style={{ marginStart: 15, justifyContent: 'space-between' }}>
 					<Text style={{ fontWeight: '500', fontSize: 18 }}>{this.props.item.name}</Text>
 					<View style={{ flexDirection: 'row' }}>
-						<MaterialIcons
-							name='location-on'
+						<MaterialCommunityIcons
+							name='map-marker-outline'
 							size={24}
 							color='#424242'
 							style={{ textAlign: 'center', textAlignVertical: 'center' }}
@@ -66,8 +66,8 @@ export default class Card extends Component<ICardProps> {
 					</View>
 					<View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
 						<View style={{ flexDirection: 'row' }}>
-							<MaterialIcons
-								name='king-bed'
+							<MaterialCommunityIcons
+								name='bed-king-outline'
 								size={24}
 								color='#424242'
 								style={{ textAlign: 'center', textAlignVertical: 'center' }}
@@ -77,8 +77,8 @@ export default class Card extends Component<ICardProps> {
 							</Text>
 						</View>
 						<View style={{ flexDirection: 'row' }}>
-							<MaterialIcons
-								name='bathtub'
+							<MaterialCommunityIcons
+								name='bathtub-outline'
 								size={24}
 								color='#424242'
 								style={{ textAlign: 'center', textAlignVertical: 'center' }}
@@ -89,7 +89,7 @@ export default class Card extends Component<ICardProps> {
 						</View>
 						<View style={{ flexDirection: 'row' }}>
 							<MaterialCommunityIcons
-								name='ruler'
+								name='arrow-expand-all'
 								size={24}
 								color='#424242'
 								style={{ textAlign: 'center', textAlignVertical: 'center' }}
@@ -100,11 +100,19 @@ export default class Card extends Component<ICardProps> {
 						</View>
 					</View>
 					<View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-						<Text
-							style={{ fontWeight: 'bold', fontSize: 16, textAlignVertical: 'center' }}
-						>{`$${this.props.item.cost}/m`}</Text>
-						<MaterialIcons
-							name='favorite'
+						<View style={{ flexDirection: 'row' }}>
+							<MaterialCommunityIcons
+								name='currency-usd'
+								size={24}
+								color='#424242'
+								style={{ textAlign: 'center', textAlignVertical: 'center' }}
+							/>
+							<Text
+								style={{ fontWeight: 'bold', fontSize: 16, textAlignVertical: 'center' }}
+							>{`${this.props.item.cost}/m`}</Text>
+						</View>
+						<MaterialCommunityIcons
+							name='heart'
 							testID='favoriteButton'
 							size={14}
 							color='#FFFFFF'

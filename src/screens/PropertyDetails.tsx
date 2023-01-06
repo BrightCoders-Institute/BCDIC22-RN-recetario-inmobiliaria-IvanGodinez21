@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { ScrollView, View, ImageBackground, Text, Share } from 'react-native';
 import Constants from 'expo-constants';
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { DataTable } from 'react-native-paper';
 // Interfaces
 import { IPropertyDetailsProps } from '../interfaces/PropertyDetails';
 
@@ -13,15 +14,18 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 
 	render() {
 		return (
-			<View style={{ marginTop: Constants.statusBarHeight }}>
+			<View
+				testID='PropertyDetailsScreen'
+				style={{ marginTop: Constants.statusBarHeight, flexDirection: 'column', flex: 1 }}
+			>
 				<ImageBackground
 					source={{ uri: this.props.route.params.data.property.image }}
-					style={{ width: '100%', height: 300 }}
+					style={{ width: 'auto', height: 'auto', flex: 1 }}
 				>
 					<View style={{ flexDirection: 'column', flex: 3, margin: 20 }}>
 						<View style={{ flexDirection: 'row', flex: 2 }}>
 							<View style={{ flex: 0.1 }}>
-								<MaterialIcons
+								<MaterialCommunityIcons
 									name='close'
 									size={30}
 									color='#FFFFFF'
@@ -33,8 +37,8 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 							</View>
 							<View style={{ flex: 0.7 }}></View>
 							<View style={{ flex: 0.1 }}>
-								<MaterialIcons
-									name='ios-share'
+								<MaterialCommunityIcons
+									name='share-variant'
 									size={30}
 									color='#FFFFFF'
 									style={{ textAlign: 'center' }}
@@ -46,10 +50,10 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 								/>
 							</View>
 							<View style={{ flex: 0.1 }}>
-								<MaterialIcons
-									name={this.props.route.params.data.property.favorite ? 'favorite' : 'favorite-border'}
+								<MaterialCommunityIcons
+									name={this.props.route.params.data.property.favorite ? 'heart' : 'heart-outline'}
 									size={30}
-									color='#FFFFFF'
+									color={this.props.route.params.data.property.favorite ? '#FF6DA2' : '#FFFFFF'}
 									style={{ textAlign: 'center' }}
 									onPress={() => {
 										this.props.route.params.data.property.favorite = !this.props.route.params.data.property.favorite;
@@ -59,25 +63,111 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 							</View>
 						</View>
 						<View>
-							<Text style={{ fontSize: 20, color: '#FFFFFF' }}>{this.props.route.params.data.property.name}</Text>
+							<Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>
+								{this.props.route.params.data.property.name}
+							</Text>
 						</View>
 					</View>
 				</ImageBackground>
-				<ScrollView>
-					<View>
-						<Text
-							style={{
-								flexDirection: 'row',
-								fontSize: 15,
-								marginTop: 10,
-								marginLeft: 10,
-							}}
-						>
-							Details
-						</Text>
-						{/* <VerticalScrollMenu data={this.props.route.params.data.ingredients} /> */}
-					</View>
-				</ScrollView>
+				<DataTable style={{ flex: 2 }}>
+					<DataTable.Header>
+						<DataTable.Title style={{ justifyContent: 'center' }}>Details</DataTable.Title>
+					</DataTable.Header>
+					<ScrollView>
+						<DataTable.Row>
+							<DataTable.Cell>
+								<View style={{ flexDirection: 'row' }}>
+									<MaterialCommunityIcons
+										name='map-marker-outline'
+										size={24}
+										color='#424242'
+										style={{ textAlign: 'center', textAlignVertical: 'center' }}
+									/>
+									<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>Address</Text>
+								</View>
+							</DataTable.Cell>
+							<DataTable.Cell style={{ justifyContent: 'flex-end' }}>
+								<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>
+									{this.props.route.params.data.property.address}
+								</Text>
+							</DataTable.Cell>
+						</DataTable.Row>
+						<DataTable.Row>
+							<DataTable.Cell>
+								<View style={{ flexDirection: 'row' }}>
+									<MaterialCommunityIcons
+										name='bed-king-outline'
+										size={24}
+										color='#424242'
+										style={{ textAlign: 'center', textAlignVertical: 'center' }}
+									/>
+									<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>Rooms</Text>
+								</View>
+							</DataTable.Cell>
+							<DataTable.Cell style={{ justifyContent: 'flex-end' }}>
+								<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>
+									{this.props.route.params.data.property.rooms}
+								</Text>
+							</DataTable.Cell>
+						</DataTable.Row>
+						<DataTable.Row>
+							<DataTable.Cell>
+								<View style={{ flexDirection: 'row' }}>
+									<MaterialCommunityIcons
+										name='bathtub-outline'
+										size={24}
+										color='#424242'
+										style={{ textAlign: 'center', textAlignVertical: 'center' }}
+									/>
+									<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>Bathrooms</Text>
+								</View>
+							</DataTable.Cell>
+							<DataTable.Cell style={{ justifyContent: 'flex-end' }}>
+								<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>
+									{this.props.route.params.data.property.bathrooms}
+								</Text>
+							</DataTable.Cell>
+						</DataTable.Row>
+						<DataTable.Row>
+							<DataTable.Cell>
+								<View style={{ flexDirection: 'row' }}>
+									<MaterialCommunityIcons
+										name='arrow-expand-all'
+										size={24}
+										color='#424242'
+										style={{ textAlign: 'center', textAlignVertical: 'center' }}
+									/>
+									<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>Area</Text>
+								</View>
+							</DataTable.Cell>
+							<DataTable.Cell style={{ justifyContent: 'flex-end' }}>
+								<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>
+									{this.props.route.params.data.property.surface.lenght *
+										this.props.route.params.data.property.surface.width}{' '}
+									{this.props.route.params.data.property.surface.unit} ²
+								</Text>
+							</DataTable.Cell>
+						</DataTable.Row>
+						<DataTable.Row>
+							<DataTable.Cell>
+								<View style={{ flexDirection: 'row' }}>
+									<MaterialCommunityIcons
+										name='currency-usd'
+										size={24}
+										color='#424242'
+										style={{ textAlign: 'center', textAlignVertical: 'center' }}
+									/>
+									<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>Cost</Text>
+								</View>
+							</DataTable.Cell>
+							<DataTable.Cell style={{ justifyContent: 'flex-end' }}>
+								<Text style={{ marginStart: 5, textAlign: 'center', textAlignVertical: 'center' }}>
+									${this.props.route.params.data.property.cost} / month
+								</Text>
+							</DataTable.Cell>
+						</DataTable.Row>
+					</ScrollView>
+				</DataTable>
 			</View>
 		);
 	}
