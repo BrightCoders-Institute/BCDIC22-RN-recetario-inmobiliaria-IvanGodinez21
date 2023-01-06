@@ -25,7 +25,8 @@
 		"react-native-screens": "~3.18.0",
 		"react-native-swiper": "^1.6.0",
 		"react-native-web": "~0.18.9",
-		"react-test-renderer": "^18.1.0"
+		"react-test-renderer": "^18.1.0",
+		"expo-updates": "~0.15.6"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.9",

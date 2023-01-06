@@ -37,7 +37,10 @@
 				"projectId": "fe090d60-a461-43c1-a7b1-6f91b579b490"
 			}
 		},
-		"owner": "brightcoders"
+		"owner": "brightcoders",
+		"runtimeVersion": {
+			"policy": "sdkVersion"
+		}
 	},
 	"name": "inmobiliaria"
 }
