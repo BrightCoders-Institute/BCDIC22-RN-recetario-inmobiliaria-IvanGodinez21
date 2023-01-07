@@ -1,3 +1,4 @@
+// Interfaces
 import { IPropertyConstructor } from '../interfaces/Property';
 
 export default class Property {

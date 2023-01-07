@@ -1,7 +1,8 @@
 // Node modules
 import React from 'react';
-import { describe, expect, it } from '@jest/globals';
 import { act, create, ReactTestInstance, ReactTestRenderer } from 'react-test-renderer';
+import { describe, expect, it } from '@jest/globals';
+// Navigation
 import Navigation from '../src/navigation/Index';
 // Root
 import App from '../App';

@@ -1,7 +1,5 @@
 // Node modules
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-// Classes
-import Property from '../classes/Property';
 // Interfaces
 import { RootStackParamList } from './RootStackParamList';
 

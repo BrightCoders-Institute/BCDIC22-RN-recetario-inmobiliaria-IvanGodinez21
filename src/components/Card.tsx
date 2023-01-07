@@ -1,6 +1,6 @@
 // Node modules
 import React, { Component } from 'react';
-import { Text, ImageBackground, View } from 'react-native';
+import { ImageBackground, Text, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 // Interfaces
 import { ICardProps } from '../interfaces/Card';

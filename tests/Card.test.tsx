@@ -1,7 +1,7 @@
 // Node modules
 import React from 'react';
-import { describe, expect, it } from '@jest/globals';
 import { act, create } from 'react-test-renderer';
+import { describe, expect, it } from '@jest/globals';
 // Classes
 import Property from '../src/classes/Property';
 // Components
