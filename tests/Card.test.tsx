@@ -8,7 +8,6 @@ import Property from '../src/classes/Property';
 import Card from '../src/components/Card';
 // Database
 import properties from '../src/databases/properties.json';
-//
 
 describe('<Card />', () => {
 	let parsedProperties: Property[];
@@ -42,6 +41,7 @@ describe('<Card />', () => {
 		const component = create(<Card item={parsedProperties[0]} />);
 		const favoriteButton = component.root.findByProps({ testID: 'favoriteButton' });
 		expect(component.root.props.item.favorite).toBe(false || null);
+		global.setImmediate = jest.useRealTimers as unknown as typeof setImmediate;
 		act(() => favoriteButton.props.onPress());
 		expect(component.root.props.item.favorite).toBe(true);
 	});

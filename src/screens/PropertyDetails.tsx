@@ -14,10 +14,7 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 
 	render() {
 		return (
-			<View
-				testID='PropertyDetailsScreen'
-				style={{ marginTop: Constants.statusBarHeight, flexDirection: 'column', flex: 1 }}
-			>
+			<View testID='propertyDetails' style={{ marginTop: Constants.statusBarHeight, flexDirection: 'column', flex: 1 }}>
 				<ImageBackground
 					source={{ uri: this.props.route.params.data.property.image }}
 					style={{ width: 'auto', height: 'auto', flex: 1 }}
@@ -26,6 +23,7 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 						<View style={{ flexDirection: 'row', flex: 2 }}>
 							<View style={{ flex: 0.1 }}>
 								<MaterialCommunityIcons
+									testID='closeButton'
 									name='close'
 									size={30}
 									color='#FFFFFF'
@@ -38,12 +36,13 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 							<View style={{ flex: 0.7 }}></View>
 							<View style={{ flex: 0.1 }}>
 								<MaterialCommunityIcons
+									testID='shareButton'
 									name='share-variant'
 									size={30}
 									color='#FFFFFF'
 									style={{ textAlign: 'center' }}
 									onPress={async () => {
-										await Share.share({
+										Share.share({
 											message: `Property: ${this.props.route.params.data.property.name}\nAddress: ${this.props.route.params.data.property.address}`,
 										});
 									}}
@@ -51,6 +50,7 @@ export default class PropertyDetails extends Component<IPropertyDetailsProps> {
 							</View>
 							<View style={{ flex: 0.1 }}>
 								<MaterialCommunityIcons
+									testID='favoriteButton'
 									name={this.props.route.params.data.property.favorite ? 'heart' : 'heart-outline'}
 									size={30}
 									color={this.props.route.params.data.property.favorite ? '#FF6DA2' : '#FFFFFF'}
