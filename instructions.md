@@ -11,16 +11,16 @@
   - [Flujo de trabajo sugerido](#flujo-de-trabajo-sugerido)
   - [Requerimientos no-funcionales](#requerimientos-no-funcionales)
   - [Recursos](#recursos)
-  
+
 # App Inmobiliaria
 
-  Atributo |  Valor
- --- | --- |
- Tipo | Individual
- Estrategia | Code Lab
- Modo | Asíncrono
- Dedicación | 10 horas
- Duración | 10 días
+| Atributo   | Valor      |
+| ---------- | ---------- |
+| Tipo       | Individual |
+| Estrategia | Code Lab   |
+| Modo       | Asíncrono  |
+| Dedicación | 10 horas   |
+| Duración   | 10 días    |
 
 ## Objetivos
 
@@ -58,7 +58,7 @@
 
 ## Requerimientos funcionales
 
- Una empresa inmobiliaria necesita una App para poder mostrar a sus clientes las propiedades que tiene disponibles en renta. La App mostrar un listado de todas las propiedades disponibles mostrando la siguiente información para cada propiedad:
+Una empresa inmobiliaria necesita una App para poder mostrar a sus clientes las propiedades que tiene disponibles en renta. La App mostrar un listado de todas las propiedades disponibles mostrando la siguiente información para cada propiedad:
 
 - Nombre
 - Dirección
@@ -86,7 +86,7 @@ En la carpeta [design](/design) se encuentra el diseño solicitado.
 ## Requerimientos no-funcionales
 
 - Base de datos
-  - Los datos (información  de las propiedades) se tomarán de un archivo local en formato JSON
+  - Los datos (información de las propiedades) se tomarán de un archivo local en formato JSON
 - Calidad
   - Utilizar un estilo de código estandarizado (revisado por Eslint)
   - Puntuación **A** obtenida en CodeClimate ó similares
@@ -96,7 +96,7 @@ En la carpeta [design](/design) se encuentra el diseño solicitado.
   - Orientado a Objetos
   - Métodos pequeños
   - Aplicar los principios SOLID
-  
+
 ## Recursos
 
 - Estructura tu pensamiento o forma de trabajo por componentes
