@@ -1,6 +1,6 @@
 // Node modules
 import React, { Component } from 'react';
-import { FlatList, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 // Components
 import Card from '../components/Card';
@@ -14,26 +14,24 @@ export default class Home extends Component<IHomeProps> {
 
 	render() {
 		return (
-			<ScrollView
+			<FlatList
 				testID='home'
 				style={{ marginTop: Constants.statusBarHeight }}
 				contentContainerStyle={{ alignItems: 'center', alignSelf: 'center' }}
-			>
-				<FlatList
-					data={this.props.route.params?.data.properties}
-					renderItem={({ item, index }) => (
-						<TouchableOpacity
-							testID={`cardTouchable-${index}`}
-							key={index}
-							onPress={() => {
-								this.props.navigation.navigate('PropertyDetails', { data: { property: item } });
-							}}
-						>
-							<Card style={styles.card} item={item} />
-						</TouchableOpacity>
-					)}
-				/>
-			</ScrollView>
+				horizontal={false}
+				data={this.props.route.params?.data.properties}
+				renderItem={({ item, index }) => (
+					<TouchableOpacity
+						testID={`cardTouchable-${index}`}
+						key={index}
+						onPress={() => {
+							this.props.navigation.navigate('PropertyDetails', { data: { property: item } });
+						}}
+					>
+						<Card style={styles.card} item={item} />
+					</TouchableOpacity>
+				)}
+			/>
 		);
 	}
 }
